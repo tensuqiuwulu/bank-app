@@ -2,14 +2,27 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    //  Setter
+        Nasabah nasabah = new Nasabah(
+                "12345",
+                "1234567890123456",
+                "John Doe",
+                "081234567890"
+        );
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        nasabah.setAlamat("Test Jalan");
+        nasabah.setPekerjaan("Test Pekerjaan");
+        nasabah.setNamaIbuKandung("Test Ibu Kandung");
+        nasabah.setPenghasilanRataRataPerbulan(5000000.0);
+
+    //  Getter
+        System.out.println("Kode CIF: " + nasabah.getKodeCIF());
+        System.out.println("NIK: " + nasabah.getNIK());
+        System.out.println("Nama Nasabah: " + nasabah.getNamaNasabah());
+        System.out.println("Telp: " + nasabah.getTelp());
+        System.out.println("Alamat: " + nasabah.getAlamat());
+        System.out.println("Pekerjaan: " + nasabah.getPekerjaan());
+        System.out.println("Ibu Kandung: " + nasabah.getNamaIbuKandung());
+        System.out.println("Penghasilan Rata-Rata Per-Bulan: Rp." + nasabah.getPenghasilanRataRataPerbulan());
     }
 }
